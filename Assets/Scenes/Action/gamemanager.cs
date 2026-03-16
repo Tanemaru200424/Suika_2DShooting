@@ -22,7 +22,12 @@ public class gamemanager : MonoBehaviour
     }
     void Update()
     {
+        //WebGLではゲームを閉じる機能を無効。
         if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        {
+            #if !UNITY_WEBGL
+                Application.Quit();//ゲームプレイ終了
+            #endif
+        }
     }
 }
