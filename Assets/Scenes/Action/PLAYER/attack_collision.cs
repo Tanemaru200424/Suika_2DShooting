@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class attack_collision : MonoBehaviour
 {
+    private bool isHit = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("ìGÇ∆ÉGÉìÉ^Å[");
-            Destroy(this.gameObject);
-            player_action.instance.attacklimit += 1;
+            if (!isHit)
+            {
+                isHit = true;
+                player_action.instance.attacklimit += 1;
+                Destroy(this.gameObject);
+            }
         }
         
     }
