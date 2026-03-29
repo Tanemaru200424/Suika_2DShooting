@@ -10,7 +10,6 @@ public class item_collision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("プレイヤーとエンター");
             Destroy(this.gameObject);
             gamemanager.instance.suika += 1;
             gamemanager.instance.zanki += 1;

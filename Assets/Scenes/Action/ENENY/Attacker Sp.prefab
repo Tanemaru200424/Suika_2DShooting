@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5ef2c43cd6d954494dd533c98acc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
-  score: 40
+  hp: 2
+  score: 50
 --- !u!114 &5172613652527910520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cf50d13e7ec284da4d8bd9b8b2d9ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  haba: 30
+  speed: 10
+  haba: 20
   updownspeed: 5
 --- !u!114 &2781977977229011096
 MonoBehaviour:
@@ -178,5 +178,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 3426616791610459195, guid: 8aee4830fab81494cbe4a7a6caba843a, type: 3}
-  frame: 100
-  generateFrame: 200

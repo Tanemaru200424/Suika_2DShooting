@@ -17,5 +17,4 @@ public class attack_move : MonoBehaviour
     {
         rb2d.velocity = new Vector3(Speed, 0, 0);
     }
-   
 }

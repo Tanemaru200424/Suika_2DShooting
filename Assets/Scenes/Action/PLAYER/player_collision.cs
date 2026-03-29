@@ -1,45 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_collision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Eattack"))
         {
-            Debug.Log("ìGÇ∆ÉGÉìÉ^Å[");
             gamemanager.instance.zanki -= 1;
-            StartCoroutine("Muteki");
+            if (gamemanager.instance.zanki <= 0) { SceneManager.LoadScene("RESULT"); }
+            else { StartCoroutine("Muteki"); }
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("ìGÇ∆ÉXÉeÉC");
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("ìGÇ∆ÉCÉOÉWÉbÉg");
-        } 
-    }
+
     IEnumerator Muteki()
     {
-        Debug.Log("ñ≥ìG");
         this.gameObject.layer = LayerMask.NameToLayer("PlayerDamage");
-        // ÇPÇOâÒì_ñ≈
-        for (int i = 0; i < 10; i++)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            yield return new WaitForSeconds(0.2f);
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            yield return new WaitForSeconds(0.2f);
-        }
-        Debug.Log("ñ≥ìGèIÇÌÇË");
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+        yield return new WaitForSeconds(5);
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         this.gameObject.layer = LayerMask.NameToLayer("Default");
 
     }

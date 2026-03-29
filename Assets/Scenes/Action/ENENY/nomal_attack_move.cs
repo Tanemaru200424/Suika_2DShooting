@@ -22,9 +22,4 @@ public class nomal_attack_move : MonoBehaviour
     {
         rb2d.velocity = new Vector3(0, speed, 0);
     }
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-
-    }
 }

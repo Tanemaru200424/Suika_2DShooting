@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class attacker_attack_move : MonoBehaviour
 {
-    public float xspeed;
-    public float yspeed;
+    public float speed;
     private Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
@@ -16,22 +15,6 @@ public class attacker_attack_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Player").transform.position.y > transform.position.y)
-        {
-            rb2d.velocity = new Vector2(-xspeed, yspeed);
-        }
-        else if (GameObject.Find("Player").transform.position.y < transform.position.y)
-        {
-            rb2d.velocity = new Vector2(-xspeed, -yspeed);
-        }
-        else if (GameObject.Find("Player").transform.position.y == transform.position.y)
-        {
-            rb2d.velocity = new Vector2(-xspeed, 0);
-        }
-    }
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-
+        rb2d.velocity = new Vector3(-speed, 0, 0);
     }
 }

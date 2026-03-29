@@ -7,7 +7,9 @@ TagManager:
   - Pattack
   - Enemy
   - Bomb
-  - EnemyBreaker
+  - Eattack
+  - Pbreaker
+  - Ebreaker
   layers:
   - Default
   - TransparentFX
@@ -44,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 2247680043
     locked: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7713207042882740756}
   m_Layer: 0
   m_Name: Attacker Attack
-  m_TagString: Enemy
+  m_TagString: Eattack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,5 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc135bf521c16f4d905d8f28f678354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xspeed: 10
-  yspeed: 5
+  speed: 20

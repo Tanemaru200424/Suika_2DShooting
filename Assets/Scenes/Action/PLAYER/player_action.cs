@@ -56,7 +56,6 @@ public class player_action : MonoBehaviour
         push = context.ReadValue<float>();
         if (context.phase == InputActionPhase.Started && attacklimit > 0)
         {
-            Debug.Log("Fire");
             attacklimit -= 1;
             Instantiate(pattack, new Vector3(transform.position.x+1,transform.position.y,transform.position.z), transform.rotation);
         }
@@ -66,15 +65,12 @@ public class player_action : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Started && gamemanager.instance.suika > 0)
         {
-            Debug.Log("‚Ô‚Á‚Ï");
-
-                gamemanager.instance.suika -= 1;
-                Instantiate(spattack1, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
-                Instantiate(spattack2, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
-                Instantiate(spattack3, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
-                Instantiate(spattack4, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
-                Instantiate(spattack5, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
-            
+            gamemanager.instance.suika -= 1;
+            Instantiate(spattack1, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(spattack2, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(spattack3, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(spattack4, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
+            Instantiate(spattack5, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
         }
     }
 
@@ -99,7 +95,6 @@ public class player_action : MonoBehaviour
             frame += Time.deltaTime * 100;
             if (frame >= generateframe)
             {
-                Debug.Log("Fire");
                 attacklimit -= 1;
                 Instantiate(pattack, new Vector3(transform.position.x + 1, transform.position.y, transform.position.z), transform.rotation);
                 frame = 0.0f;

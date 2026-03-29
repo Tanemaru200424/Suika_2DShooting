@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3799420309336586527}
   m_Layer: 0
   m_Name: Nomal Attack
-  m_TagString: Enemy
+  m_TagString: Eattack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

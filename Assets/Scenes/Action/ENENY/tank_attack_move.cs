@@ -12,18 +12,11 @@ public class tank_attack_move : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
         rb2d.velocity = new Vector3(-xspeed, yspeed, 0);
-    }
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-
     }
 }

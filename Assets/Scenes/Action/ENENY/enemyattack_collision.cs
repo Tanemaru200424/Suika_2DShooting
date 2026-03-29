@@ -6,18 +6,9 @@ public class enemyattack_collision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Bomb") || collision.gameObject.CompareTag("Ebreaker"))
         {
-            Debug.Log("プレイヤーとエンター");
             Destroy(this.gameObject);
-            
         }
-
     }
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
-       
-    }
-
 }
